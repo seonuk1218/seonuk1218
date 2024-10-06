@@ -69,7 +69,7 @@ markmap:
 
 - Spark
   - 핵심개념
-  - Spark with springbatch
+  - Spark with springbatch (https://docs.spring.io/spring-hadoop/docs/current/reference/html/springandhadoop-spark.html) 예시 만들어보기
 - CAP
 - Data 를 다루는 기술
   - Relational Database
