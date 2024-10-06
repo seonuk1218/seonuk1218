@@ -67,6 +67,18 @@ markmap:
 
 ## Tech Research
 
+- Data 를 다루는 기술
+  - Relational Database
+    - DB Layer Tranaction & control at Application Layer 
+    - 정규화
+    - ERD 설계
+  - Key, Value Database Redis
+    - Distributed Lock
+  - Kafka
+    - Message Broker Lock
+  - HDFS
+    - Data Transaction at Hadoop?
+  - Stream API 를 보면 데이터가 보인다 (여러 자료구조에 따른 다양한 API 를 제공하므로 그 과정에서 데이터처리를 배울 수 있다.)
 - Apache Ignite Cache
   - 개요
   - Property
