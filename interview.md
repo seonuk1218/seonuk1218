@@ -67,6 +67,10 @@ markmap:
 
 ## Tech Research
 
+- Spark
+  - 핵심개념
+  - Spark with springbatch
+- CAP
 - Data 를 다루는 기술
   - Relational Database
     - DB Layer Tranaction & control at Application Layer 
