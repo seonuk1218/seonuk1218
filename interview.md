@@ -101,6 +101,12 @@ markmap:
   - 개요
   - Property
   - 구성예제
+- Redis
+  - Cache
+  - Session Data
+  - Replication (AOF, Snapshot)
+  - Distributed Lock
+  - Ray Limiter
 - Logging (ELK)
   - 개요
   - Property
