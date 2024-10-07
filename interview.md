@@ -104,6 +104,8 @@ markmap:
 - BDD
 - DDD
 - SAGA
+  - choreography
+  - orchestration
 - CQRS
 - SSL/TLS & mTLS
 - key-pair
