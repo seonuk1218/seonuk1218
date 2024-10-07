@@ -112,6 +112,7 @@ markmap:
 - Tracing (Opentelementry)
 - Transaction
 - BDD
+  - 테스팅은 내가 작성한 API 의 첫 고객이 내가 되어봄으로써 사용자의 입장을 생각할 수 있게 해보는 장점이 있다.
 - DDD
 - SAGA
   - choreography
