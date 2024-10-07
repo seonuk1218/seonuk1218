@@ -125,6 +125,19 @@ markmap:
 - Container Orchestration
 - NIO
 - Resilience4J
+- Algorithm
+  - 알고리즘은 먼저 차수 측정!
+
+## Book
+
+- Code Complete
+- 데이터 중심 애플리케이션 설계
+- 실용주의 프로그래머
+  - 쓸만한 내용도 많으나 앞부분은 논리적으로 생각하면 당연한 내용들 같은 느낌??
+- GoF 디자인패턴
+  - 생성
+  - 구조
+  - 행동
 - Zookeeper
 - NginX
 - Treafik
