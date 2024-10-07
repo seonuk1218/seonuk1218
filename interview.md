@@ -67,6 +67,16 @@ markmap:
 
 ## Tech Research
 
+- Data PipeLine
+  - Collect
+  - Ingest
+    - CDC or batch process
+  - Compute
+    - Batch Processing: Apache Spark, MapReduce, Hive
+    - Stream Processing(real time data): Flink, Apache Storm ...
+    - ETL (Extract Transform Load): Apache Airflow, AWS Glue ...
+  - Store
+    - Data lake (S3, HDFS 비정형데이터 / snowFlake ... 데이터웨어하우스)
 - Spark
   - 핵심개념
   - Spark with springbatch (https://docs.spring.io/spring-hadoop/docs/current/reference/html/springandhadoop-spark.html) 예시 만들어보기
