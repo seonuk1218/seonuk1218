@@ -1,0 +1,35 @@
+@startuml
+participant BatchEventCallService
+participant QuartzAPI
+participant JobResultsHolder
+participant BatchExecuteJob
+participant BatchExecuteService
+participant AbstractBatchService
+participant StandardElinkBatchService
+participant MasterLogEntityService
+
+[-> BatchEventCallService ++: Type-1) HTTP Event Call Batch
+QuartzAPI -> QuartzAPI : Type-2) Scheduled Batch
+BatchEventCallService --> QuartzAPI : triggerJob
+QuartzAPI --> BatchExecuteJob ++ : trigger
+BatchExecuteJob -> BatchExecuteService ++ : execute
+BatchEventCallService -> JobResultsHolder ++ : waitForResult
+BatchExecuteService -> BatchExecuteService : determineService
+BatchExecuteService -> BatchExecuteService : checkFileValidation
+BatchExecuteService -> BatchExecuteService: BatchExecution build
+BatchExecuteService -> AbstractBatchService ++ : execute
+AbstractBatchService -> AbstractBatchService: beforeProcess
+AbstractBatchService --> MasterLogEntityService: logging
+AbstractBatchService -> StandardElinkBatchService ++ : doExecute
+StandardElinkBatchService -> StandardElinkBatchService : FF, DF, DF, DD
+StandardElinkBatchService --> MasterLogEntityService : logging
+StandardElinkBatchService -> AbstractBatchService -- : return
+AbstractBatchService -> AbstractBatchService: afterProcess
+AbstractBatchService --> MasterLogEntityService: logging
+AbstractBatchService -> BatchExecuteService -- : return
+BatchExecuteService -> BatchExecuteJob -- : return
+BatchExecuteJob -> JobResultsHolder -- : putResult\n(only event call)
+JobResultsHolder -> BatchEventCallService -- : return
+
+[<- BatchEventCallService -- : return
+@enduml
