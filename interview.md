@@ -133,13 +133,21 @@ markmap:
 - SSL/TLS & mTLS
 - key-pair
 - JPA
-- CI
+- CI / CD
+  - Rollout
+  - Blue Green
+  - Canary
 - Encoding
 - Container Orchestration
 - NIO
 - Resilience4J
 - Algorithm
   - 알고리즘은 먼저 차수 측정!
+ 
+- Zookeeper
+- NginX
+- Treafik
+- Terraform
 
 ## Book
 
@@ -151,7 +159,4 @@ markmap:
   - 생성
   - 구조
   - 행동
-- Zookeeper
-- NginX
-- Treafik
-- Terraform
+- Refactoring 2판
