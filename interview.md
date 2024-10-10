@@ -77,6 +77,14 @@ markmap:
 
 ## Tech Research
 
+- MSA
+	- MSA 에서의 데이터 정합성 맞추기
+		- CQRS (TODO 그림 제시)
+			- CDC 로 정합성 맞추기
+		- SAGA (TODO 그림 제시)
+			- 	보상 트랜잭션
+	- 전환 시 장점?
+		- 도메인을 분리하는 것 만으로 좋은 설계를 유도할 수 있다고 생각
 - 여러가지 Git Branching 전략
 - DB
 	- Master/Slave 구조의 MySQL, PostgreSQL, ...
