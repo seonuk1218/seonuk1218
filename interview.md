@@ -77,6 +77,9 @@ markmap:
 
 ## Tech Research
 
+- Gradle
+	- Gradle 은 무슨 도구?
+	- Build가 아니라 JIB?
 - MSA
 	- MSA 에서의 데이터 정합성 맞추기
 		- CQRS (TODO 그림 제시)
