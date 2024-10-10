@@ -75,6 +75,13 @@ markmap:
 
 ## Tech Research
 
+- 여러가지 Git Branching 전략
+- DB
+	- Master/Slave 구조의 MySQL, PostgreSQL, ...
+		- Postgre	의 MVCC (Undo가 아니라 Tuple생성하여 가비지 발생 우려?)
+	- READ/WRITE 전부 허용하는 Oracle, Tibero?
+	- DB Appliance / 
+	- MySQL 가이드 보면서 DB 부문 지식 강화
 - Data PipeLine
   - Collect
   - Ingest
