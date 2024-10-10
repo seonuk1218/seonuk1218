@@ -1,0 +1,21 @@
+Category,Parameter,Default Value,Recommended Value,Description
+Binlog,binlog_cache_size,32768,256K,binlog 용 캐시크기트랜젝션 동안 binary log에 대해 SQL 문을 잡고 있는 캐시사이즈큰 다중문 트랜젝션을 빈번히 사용한다면 이 사이즈를 크게 잡아서 퍼포먼스를 개선할 수 있음
+Binlog,expire_logs_days,0,7,버전 8 부터는 expire_logs_second 로 변경
+Connection,back_log,150,3000,max_connections 이상의 커넥션이 대량으로 몰릴 때 큐에 대기 가능한 커넥션 수
+Connection,lock_wait_timeout,86400,3600,테이블 락을 중단하기까지 대기하는 시간메타데이터 락을 획득하기 위해 대기하는 시간(초)
+Connection,max_allowed_packet,16777216,1G,한 패킷의 최대 크기
+Connection,max_connections,151,3000,허용 가능한 최대 동시 접속 수, 각각의 커넥션은 최소 thread_stack의 사이즈만큼 메모리 사용
+InnoDB,max_heap_table_size,16777216,32M,사용자가 생성한 메모리 테이블의 최대 크기(보통 tmp_table_size와 관계 있으며 유사 크기로 지정)MEMORY 스토리지 엔진으로 생성할 수 있는 테이블의 최대 크기
+InnoDB,innodb_buffer_pool_size,134217728,메모리 및 업무 특성에 맞게 조정,InnoDB 엔진으로 된 테이블과 인덱스를 캐시하기 위한 메모리 버퍼 크기초기 시스템 전체 메모리의 40% 수준으로 설정하고 사용량에 따라 증감
+InnoDB,innodb_file_per_table,ON,1,테이블 단위로 테이블스페이스 할당, 활성 시 테이블별로 .frm, .ibd 각각 생성
+InnoDB,innodb_io_capacity,200,800,InnoDB 메인 스레드가 I/O 작업을 할 수 있는 용량, 시스템의 I/O 수준에 의존적임일반적으로 7200 RPM 하드 드라이브인 경우 100으로 설정RAID 구성이나 SSD 사용 등에 따라 더 높은 값으로 설정RAID1: 200, RAID10: 200 × write arrays, SSD: 5000, FusionIO: 20000On-Premise 환경에서 적용 가능
+InnoDB,innodb_lock_wait_timeout,50,50,트랜잭션 락(record lock)을 대기하는 시간(초)InnoDB에서 트랜잭션 처리 중 락이 걸렸을 시 롤백될 때까지 대기하는 시간InnoDB는 자동으로 데드락을 검색해서 롤백시킨다
+InnoDB,innodb_log_buffer_size,16777216,32M,로그(redo) 버퍼 크기클수록 디스크 사용량이 줄어서 성능이 향상되지만, 시스템 다운 시 손실되는 트랜잭션 양도 증가됨크기가 작으면 로그 버퍼를 로그 파일로 쓰기 위한 부하가 많이 발생할 수도 있음
+InnoDB,innodb_open_files,500,65535,DB 전체에서 동시에 열어 놓을 수 있는 InnoDB 테이블의 .ibd 파일의 수
+InnoDB,join_buffer_size,262144,2M,조인이 테이블을 풀 스캔하기 위해 사용하는 버퍼 크기, Driven 테이블이 FULL SCAN 할 때 사용됨
+InnoDB,read_buffer_size,65536,2M,테이블 스캔에 필요한 버퍼 크기
+InnoDB,read_rnd_buffer_size,65536,2M,디스크 검색을 피하기 위한 랜덤 읽기 버퍼 크기정렬 대상이 커서 Two-Pass 알고리즘을 쓸 때만 사용Two-Pass 알고리즘: 정렬 컬럼과 프라이머리 키 값만 Sort Buffer에 담아서 정렬 수행 후, 정렬된 순서대로 다시 프라이머리 키로 테이블을 읽어 SELECT에 포함된 컬럼의 데이터를 가져오는 방식
+Logging,long_query_time,10,1,느린 쿼리의 기준 시간(초) - 기준 필요 (1 또는 2)
+Logging,slow_query_log,OFF,ON,느린 쿼리 기록 활성화
+Memory,sort_buffer_size,262144,2M,정렬에 필요한 버퍼의 크기, ORDER BY 또는 GROUP BY 연산 속도와 관련
+Mysqld,performance_schema,OFF,ON,performance_schema 활성화
