@@ -36,6 +36,8 @@ markmap:
   - 수행내역
     - ERD 작성시 추가로 고려 했던 점이 있는지?
       인덱싱이라던지, 데이터 특성에 따른 처리
+    - 왜 SpringBatch? 데이터 옮기는 똑똑한 사람들이 만든 추상화, Listener 자유로움 실패지점 재시작... 등
+      왜 SpringIntegration? 파일 생성 이벤트 감지, Apache Mina SSHD로의 전환..
   - 결과 및 향후 개선과제
 - MCI 리팩토링
   - 개요
@@ -68,7 +70,7 @@ markmap:
 - Batch
   - 제품 특징
   - 현대적인 ETL 제품이 되려면?
-    - 타 제품 사례
+    - 타 제품 사례 (Apache Airflow, Spring Cloud Data flow)
     - ⭐️ 지속적인 DDD를 통한 솔루션 모듈 관리 (Core, Extension...)
     - 강력 Monitoring 을 위한 오픈소스 통합 지원
       - Logging(ELK), Metric(Grafana), Tracing(???)
